@@ -1,0 +1,22 @@
+<form action='/login' method='post'>
+  <div class='form__login'>
+    <h2 class='login__titulo'>Login de usuario</h2>
+
+    <label class='login__label' for='email'>Email</label>
+    <input id='email' type='email' name='email' placeholder='Email' />
+
+    <label class='login__label' for='password'>Password</label>
+    <input id='password' type='password' name='password' placeholder='Password' />
+
+    <button id='login__submit' type='submit' class='btn btn-sucess mt-3 mb-5'>Login</button>
+
+    <a id='login__register_link' href='/register' type='button'>Ir a registrar</a>
+    {{#if userRegisterSuccess}}
+      <div class='success_message'>
+        Se ha creado correctamente el usuario:
+        {{registeredUser}}
+        <p>{{error}}</p>
+      </div>
+    {{/if}}
+  </div>
+</form>

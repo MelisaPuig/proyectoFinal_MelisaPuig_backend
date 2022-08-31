@@ -1,0 +1,32 @@
+<nav>
+  <ul>
+    <a href='/productos'>Productos</a>
+  </ul>
+  <ul>
+    <a href='/carrito'>Carrito</a>
+  </ul>
+  <ul>
+    <a href='/chat'>Chat</a>
+  </ul>
+  <ul>
+    <a href='/info'>Configuración</a>
+  </ul>
+  <ul>
+    <a href='/logout'>Logout</a>
+  </ul>
+</nav>
+<div id='chat'>
+  <div id='chat__messages'>
+  </div>
+  <div class='form-group'>
+    <label for='chat__user_message'><b>Message:</b></label>
+    <input id='chat__user_message' class='form-control' type='text' name='user_message' />
+  </div>
+  <button
+    class='submit_button'
+    onclick='chatSendMessage()'
+    class='btn btn-sucess mt-3 mb-5'
+  >Send</button>
+</div>
+<script src='/socket.io/socket.io.js'></script>
+<script src='/public/js/chat.js'></script>

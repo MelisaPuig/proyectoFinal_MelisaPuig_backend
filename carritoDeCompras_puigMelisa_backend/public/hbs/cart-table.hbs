@@ -1,0 +1,35 @@
+{{#if hasProducts}}
+  <table class='cart__table' border='solid'>
+    <tr>
+      <th>Imagen</th>
+      <th>Categor&iacute;a</th>
+      <th>Nombre</th>
+      <th>Descripci&oacute;n</th>
+      <th>Precio</th>
+      <th>Cantidad</th>
+      <th>Total</th>
+    </tr>
+    {{#each products}}
+      <tr>
+        <td>
+          <a href='/productos/{{this._id}}'>
+            <img src='{{this.picture}}' alt='{{this.name}}' style='height: auto; width: 100px;' />
+          </a>
+        </td>
+        <td>{{this.category}}</td>
+        <td>{{this.name}}</td>
+        <td>{{this.description}}</td>
+        <td>${{this.price}}</td>
+        <td>{{this.count}}</td>
+        <td>{{this.total}}</td>
+      </tr>
+    {{/each}}
+  </table>
+  <h3>
+    Final total: $
+    <b>{{total}}</b>
+  </h3>
+  <button class='submit_button' onClick='generateOrder("{{cartId}}")'>Generar orden</button>
+{{else}}
+  <div class='products__no_products'>There are no products.</div>
+{{/if}}

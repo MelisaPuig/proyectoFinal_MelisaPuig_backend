@@ -1,0 +1,8 @@
+{{#each messages}}
+  <div class='chat__message'>
+    <img class='chat__message_image' src='{{this.avatar}}' />
+    <span class='chat__message_alias'>{{this.name}}</span>
+    <span class='chat__message_date'>({{this.date}})</span>:
+    <span class='chat__message_body'>{{this.body}}</span>
+  </div>
+{{/each}}

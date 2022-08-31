@@ -1,0 +1,45 @@
+<nav>
+  <ul>
+    <a href='/productos'>Productos</a>
+  </ul>
+  <ul>
+    <a href='/carrito'>Carrito</a>
+  </ul>
+  <ul>
+    <a href='/chat'>Chat</a>
+  </ul>
+  <ul>
+    <a href='/info'>Configuración</a>
+  </ul>
+  <ul>
+    <a href='/logout'>Logout</a>
+  </ul>
+</nav>
+
+<div class='product__container'>
+  <h2>{{this.name}}</h2>
+  <img src='{{picture}}' alt='{{name}}' style='height: auto; width: 200px' />
+  <div class='product__name'>
+    {{name}}
+  </div>
+  <p>
+    {{description}}
+  </p>
+  <p>
+    Stock:
+    <b>{{stock}}</b>
+  </p>
+  <p>
+    Cantidad comprada:
+    <input
+      id='product__count_to_buy'
+      type='number'
+      min='0'
+      max='{{stock}}'
+      value='{{count}}'
+      placeholder='Cantidad'
+    />
+  </p>
+  <button onclick="setProductCount('{{this._id}}')">Agregar al carrito</button>
+</div>
+<script src='/public/js/cart.js'></script>

@@ -1,0 +1,408 @@
+/*  GLOBAL  */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2 {
+  display: block;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 100vw;
+}
+
+nav ul {
+  background-color: #dddddd;
+  border-style: solid;
+  border-width: 1px;
+  flex-grow: 1;
+  padding-inline-start: 0;
+  text-align: center;
+}
+
+nav ul a {
+  text-decoration: none;
+}
+
+a {
+  display: block;
+  font-size: 20px;
+  margin: 5px auto 10px;
+  text-align: center;
+}
+
+input,
+select {
+  font-size: 14px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.error_message {
+  background-color: #ffcccc;
+  border-radius: 20px;
+  color: #880000;
+  display: block;
+  font-size: 1.5em;
+  padding: 15px;
+  margin: 5px auto;
+}
+
+.success_message {
+  background-color: #ccffcc;
+  border-radius: 20px;
+  color: #008800;
+  display: block;
+  font-size: 1.5em;
+  padding: 15px;
+  margin: 5px auto;
+}
+
+.submit_button {
+  background-color: #339933;
+  border: 1px;
+  border-radius: 10px;
+  color: #ffffff;
+  display: block;
+  cursor: pointer;
+  margin: 15px auto;
+  max-width: 200px;
+  padding: 8px 20px;
+  text-decoration: none;
+}
+
+/* REGISTER FORM */
+
+.form__register {
+  background-color: #ddddff;
+  margin: 15px auto;
+  min-width: 400px;
+  padding: 20px;
+  text-align: center;
+  width: 90%;
+}
+
+.register__label {
+  color: #000000;
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#register__submit {
+  background-color: #339933;
+  border: 1px;
+  border-radius: 10px;
+  color: #ffffff;
+  display: block;
+  cursor: pointer;
+  margin: 15px auto;
+  max-width: 200px;
+  padding: 8px 20px;
+  text-decoration: none;
+}
+
+.register__login_link {
+  font-size: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* LOGIN FORM */
+
+.form__login {
+  background-color: #ddddff;
+  margin: 15px auto;
+  min-width: 400px;
+  padding: 20px;
+  text-align: center;
+  width: 90%;
+}
+
+.login__label {
+  color: #000000;
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#login__submit {
+  background-color: #339933;
+  border: 1px;
+  border-radius: 10px;
+  color: #ffffff;
+  display: block;
+  cursor: pointer;
+  margin: 15px auto;
+  max-width: 200px;
+  padding: 8px 20px;
+  text-decoration: none;
+}
+
+.login__register_link {
+  font-size: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*  CHAT  */
+
+#chat {
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+}
+
+#chat__messages {
+  border-color: #666666;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  max-height: 300px;
+  min-height: 300px;
+  overflow-y: scroll;
+  text-align: left;
+}
+
+.chat__message {
+  margin: 15px 5px;
+}
+
+.chat__message_image {
+  width: 36px;
+  height: 36px;
+}
+
+.chat__message_name,
+.chat__message_date,
+.chat__message_body {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.chat__message_name {
+  color: blue;
+  font-style: bold;
+}
+.chat__message_date {
+  color: brown;
+}
+.chat__message_body {
+  color: green;
+  font-style: italic;
+}
+
+/* PRODUCTS  */
+
+.products__categories_container {
+  text-align: center;
+  width: 100%;
+}
+
+.products__table {
+  margin: 0 auto;
+  max-width: 720px;
+  min-width: 250px;
+  width: 100%;
+  text-align: center;
+}
+
+/* CART */
+
+.cart__table {
+  margin: 0 auto;
+  max-width: 720px;
+  min-width: 250px;
+  width: 100%;
+  text-align: center;
+}
+
+/*  PREVIOS  */
+
+.tabla_productos {
+  margin: 0 auto;
+  max-width: 720px;
+  min-width: 250px;
+  width: 100%;
+  text-align: center;
+}
+
+.form {
+  margin: 0 auto;
+  max-width: 700px;
+  min-width: 300px;
+  width: 100%;
+  text-align: center;
+}
+
+.form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.form input {
+  display: block;
+  margin: 0 auto;
+}
+
+button {
+  margin-top: 15px;
+}
+
+.no_hay_productos {
+  display: block;
+  font-size: 25px;
+  color: #ff0000;
+  text-align: center;
+}
+
+.normalizacion_etiqueta {
+  font-size: 20px;
+}
+
+.cartel_bienvenido {
+  align-items: center;
+  background-color: #99ff99;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px auto;
+  min-width: 400px;
+  width: 90%;
+}
+
+.cartel_bienvenido--texto {
+  color: #22aa22;
+  font-size: 1.5rem;
+  margin: 15px;
+}
+
+#boton_desloguear {
+  background-color: #ffff55;
+  border: 1px;
+  border-radius: 10px;
+  margin: auto 15px;
+  padding: 8px;
+}
+
+.login {
+  background-color: #ddddff;
+  margin: 15px auto;
+  min-width: 400px;
+  padding: 20px;
+  width: 90%;
+}
+
+.login_titulo {
+  color: #0000ff;
+  display: block;
+  font-size: 3rem;
+  padding: 10px;
+}
+
+.login_label {
+  color: #000000;
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#username {
+  display: block;
+  margin: 15px auto;
+  padding: 2px;
+  width: 90%;
+}
+
+#login_submit {
+  background-color: #33aa33;
+  border: 1px;
+  border-radius: 10px;
+  color: #ffffff;
+  margin: auto 15px;
+  padding: 8px;
+}
+
+.logout_cartel {
+  background-color: #ddddff;
+  color: #0000ff;
+  font-size: 2rem;
+  margin: 15px auto;
+  min-width: 400px;
+  padding: 20px;
+  width: 90%;
+}
+
+/**
+   ERROR
+   */
+
+.error {
+  background-color: #ff6666;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: center;
+  width: 90%;
+}
+
+/* .error_message {
+  color: #ffffff;
+  display: block;
+  font-size: 1.5rem;
+  margin: 0 auto;
+} */
+
+#go_back {
+  background-color: #ffff00;
+  border: 1px;
+  border-radius: 10px;
+  color: #000000;
+  cursor: pointer;
+  margin: 15px 15px;
+  padding: 8px;
+}
+
+.inner_link {
+  background-color: #339933;
+  border: 1px;
+  border-radius: 10px;
+  color: #ffffff;
+  display: block;
+  cursor: pointer;
+  margin: 15px 15px;
+  max-width: 100px;
+  padding: 8px;
+  text-decoration: none;
+}
+
+/**
+   * INFO
+   */
+
+.tabla_info {
+  border: 1px solid #000;
+  margin: 0 auto;
+  max-width: 400px;
+  width: 100%;
+}
+
+.tabla_info td,
+.tabla_info th {
+  border: 1px solid #000;
+}

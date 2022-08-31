@@ -1,0 +1,38 @@
+<form action='/register' method='post'>
+  <div class='form__register'>
+    <h2 class='register__titulo'>Registro de usuario</h2>
+
+    <label class='register__label' for='email'>Email</label>
+    <input id='email' type='email' name='email' placeholder='Email' />
+
+    <label class='register__label' for='name'>Nombre de usuario</label>
+    <input id='name' type='text' name='name' placeholder='Nombre de usuario' />
+
+    <label class='register__label' for='password'>Password</label>
+    <input id='password' type='password' name='password' placeholder='Password' />
+
+    <label class='register__label' for='password2'>Repita su password</label>
+    <input id='password2' type='password' name='password2' placeholder='Repita su password' />
+
+    <label class='register__label' for='password2'>URL de foto de perfil</label>
+    <input
+      id='profilePicture'
+      type='text'
+      name='profilePicture'
+      placeholder='URL de foto de perfil'
+    />
+
+    <label class='register__label' for='phoneNumber'>N&uacute;mero de tel&eacute;fono</label>
+    <input id='phoneNumber' type='text' name='phoneNumber' placeholder='Número de teléfono' />
+
+    <button id='register__submit' type='submit' class='btn btn-sucess mt-3 mb-5'>Registrar</button>
+    <a id='register__login_link' href='/login' type='button'>Ir a login</a>
+
+    {{#if errored}}
+      <div class='error_message'>
+        Ha ocurrido un error intenando registrar al usuario:
+        <p>{{error}}</p>
+      </div>
+    {{/if}}
+  </div>
+</form>

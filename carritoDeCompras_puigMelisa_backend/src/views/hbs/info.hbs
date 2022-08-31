@@ -1,0 +1,30 @@
+<nav>
+  <ul>
+    <a href='/productos'>Productos</a>
+  </ul>
+  <ul>
+    <a href='/carrito'>Carrito</a>
+  </ul>
+  <ul>
+    <a href='/chat'>Chat</a>
+  </ul>
+  <ul>
+    <a href='/info'>Configuración</a>
+  </ul>
+  <ul>
+    <a href='/logout'>Logout</a>
+  </ul>
+</nav>
+
+<div class='info'>
+  <table class='info__table'>
+    <th>Clave</th>
+    <th>Valor</th>
+    {{#each info}}
+      <tr>
+        <td>{{@key}}</td>
+        <td>{{this}}</td>
+      </tr>
+    {{/each}}
+  </table>
+</div>s
